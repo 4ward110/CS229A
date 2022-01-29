@@ -19,12 +19,22 @@ grad = zeros(size(theta));
 %
 % Note: grad should have the same dimensions as theta
 %
+% 
+%
 
+% J=(1/m)*sum((-y) .* (log(sigmoid(X * theta)))-(1-y) .* (log(1-sigmoid(X * theta))))
+% 
+% for i=1:size(theta),
+%   grad(i)=(1/m)*sum((sigmoid(X * theta)-y) .* X(:,i));
+% end
 
+% cost function
+h = sigmoid(X*theta);
+J = ((-y)'*log(h) - (1-y)'*log(1-h))/m;
 
+%gradient
 
-
-
+grad = (X'*(h-y))/m;
 
 
 % =============================================================

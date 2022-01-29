@@ -12,7 +12,13 @@ figure; hold on;
 %               examples and 'ko' for the negative examples.
 %
 
+%find positive value index
+p = find(y);
+%find negative value index
+n = find(y == 0);
 
+plot(X(p,1),X(p,2), 'k+', 'LineWidth', 2);
+plot(X(n,1),X(n,2), 'ko', 'MarkerFaceColor', 'y');
 
 
 

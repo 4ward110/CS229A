@@ -15,20 +15,6 @@ fprintf('Normalizing Features ...\n');
 
 X = [ones(m, 1) X];
 
-
-% Run gradient descent
-% Choose some alpha value
-% alpha = 0.1;
-% num_iters = 400;
-% 
-% % Init Theta and Run Gradient Descent 
-% theta = zeros(3, 1);
-% [theta, ~] = gradientDescentMulti(X, y, theta, alpha, num_iters);
-% 
-% % Display gradient descent's result
-% fprintf('Theta computed from gradient descent:\n%f\n%f\n%f',theta(1),theta(2),theta(3))
-
-
 % Run gradient descent:
 % Choose some alpha value
 alpha = 0.01;
@@ -39,7 +25,7 @@ theta = zeros(3, 1);
 [theta, J_history] = gradientDescentMulti(X, y, theta, alpha, num_iters);
 
 % Plot the convergence graph
-plot(1:num_iters, J_history, '-g', 'LineWidth', 2);
+plot(1:num_iters, J_history, '-g', 'LineWidth', 1);
 xlabel('Number of iterations');
 ylabel('Cost J');
 
