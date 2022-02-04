@@ -1,5 +1,5 @@
 function submit()
-  addpath('../lib','../lib/jsonlab');
+  addpath('./lib');
 
   conf.assignmentKey = '-wEfetVmQgG3j-mtasztYg';
   conf.itemName = 'Regularized Linear Regression and Bias/Variance';
@@ -33,7 +33,6 @@ function submit()
   conf.output = @output;
 
   submitWithConfiguration(conf);
-  rmpath('../lib/jsonlab', '../lib'); 
 end
 
 function out = output(partId, auxstring)

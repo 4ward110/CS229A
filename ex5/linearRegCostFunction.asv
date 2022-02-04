@@ -25,7 +25,7 @@ diff = X*theta - y;
 p = lambda*(theta1'*theta1);
 J = (diff'*diff)/(2*m) + p/(2*m);
 
-grad = (X'*diff + lambda*theta1)/m;
+grad = X'*diff + lambda*theta1
 
 
 % =========================================================================
