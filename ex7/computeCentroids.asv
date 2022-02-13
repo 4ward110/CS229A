@@ -28,17 +28,18 @@ centroids = zeros(K, n);
 
 for i=1:K
     sum = zeros(1, n);
-%     num_ele = size(find(idx == i),1);
-    k = 0;
-    for j = 1:m
-        if idx(j) == i
-            sum = sum + X(j,:);
-            k = k + 1;
-        end
+    num_ele = size(find(idx == i),1);
+    for j = num_ele
+        sum = sum + X(idx); 
     end
-    sum = sum/k;
-    centroids(i,:) = sum;
+    sum = 
 end
+
+
+
+
+
+
 
 % =============================================================
 

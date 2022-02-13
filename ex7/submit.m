@@ -1,5 +1,5 @@
 function submit()
-  addpath('../lib','../lib/jsonlab');
+  addpath('./lib');
 
   conf.assignmentKey = 'rGGTuM9gQoaikOnlhLII1A';
   conf.itemName = 'K-Means Clustering and PCA';
@@ -33,7 +33,6 @@ function submit()
   conf.output = @output;
 
   submitWithConfiguration(conf);
-  rmpath('../lib/jsonlab', '../lib');
 end
 
 function out = output(partId, auxstring)

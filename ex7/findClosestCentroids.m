@@ -21,12 +21,35 @@ idx = zeros(size(X,1), 1);
 % Note: You can use a for-loop over the examples to compute this.
 %
 
+% 
+% for i=1:size(X,1)
+%     g1 = X(i, :);
+%     a = [];
+%     for j=1:K
+%         g2 = centroids(j, :);
+%         norm_cal = norm(g2-g1);
+%         a(j) = norm_cal;
+%     end
+%     min_ind = find(a == min(a));
+%     idx(i) = min_ind;
+% end
+% 
 
 
-
-
-
-
+for i = 1:size(X,1)
+  x = X(i,:);
+  max = inf;
+  ind = 0;
+  for j = 1:K
+    cent = centroids(j,:);
+    cost = sum((x - cent) .^ 2);
+    if cost < max,
+      max = cost;
+      ind = j;
+    end
+    idx(i,1) = ind;
+  end
+end
 % =============================================================
 
 end
