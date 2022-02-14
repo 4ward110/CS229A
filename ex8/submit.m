@@ -1,5 +1,5 @@
 function submit()
-  addpath('../lib','../lib/jsonlab');
+  addpath('./lib');
 
   conf.assignmentKey = 'gkyVYM98RcWlmQ9s84QNKA';
   conf.itemName = 'Anomaly Detection and Recommender Systems';
@@ -38,7 +38,6 @@ function submit()
   conf.output = @output;
 
   submitWithConfiguration(conf);
-  rmpath('../lib/jsonlab', '../lib');
 end
 
 function out = output(partId, auxstring)
