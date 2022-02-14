@@ -66,7 +66,6 @@ for j=1:num_users
   Theta_grad(j, :) = Theta_grad(j, :)+lambda*Theta(j, :); % regularized term of theta.
 end
 
-
 % =============================================================
 
 grad = [X_grad(:); Theta_grad(:)];
